@@ -1,0 +1,71 @@
+\hypertarget{class_dijkstra}{}\doxysection{Dijkstra Class Reference}
+\label{class_dijkstra}\index{Dijkstra@{Dijkstra}}
+
+
+{\ttfamily \#include $<$Dijkstra.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dijkstra_a7b869290d6ff1813d6a3a670d96466b5}{Dijkstra}} (\mbox{\hyperlink{class_graph}{Graph}} graph, vector$<$ Vertex $>$vertices)
+\item 
+vector$<$ Vertex $>$ \mbox{\hyperlink{class_dijkstra_a78361229abe5ac4df5a98b71f3004eb7}{shortest\+Path}} (Vertex source, Vertex destination)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_dijkstra_aee53b93167096d0f959fc1b548af96cd}{g\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a algorithm to determine the shortest path between two vertices of a graph. Some minor assumptions/modifications\+: we are making an directed/undirected graph into a undirected graph to analyze because we are assuming no one is traveling back and forth between two same airports and there will normally be a flight going back and forth between two places 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dijkstra_a7b869290d6ff1813d6a3a670d96466b5}\label{class_dijkstra_a7b869290d6ff1813d6a3a670d96466b5}} 
+\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{Dijkstra()}{Dijkstra()}}
+{\footnotesize\ttfamily Dijkstra\+::\+Dijkstra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}}}]{graph,  }\item[{vector$<$ Vertex $>$}]{vertices }\end{DoxyParamCaption})}
+
+Default constructor 
+\begin{DoxyParams}{Parameters}
+{\em graph} & -\/ Uder input graph \\
+\hline
+{\em vertices} & -\/ Vector of all the vertices in that graph. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dijkstra_a78361229abe5ac4df5a98b71f3004eb7}\label{class_dijkstra_a78361229abe5ac4df5a98b71f3004eb7}} 
+\index{Dijkstra@{Dijkstra}!shortestPath@{shortestPath}}
+\index{shortestPath@{shortestPath}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{shortestPath()}{shortestPath()}}
+{\footnotesize\ttfamily vector$<$ Vertex $>$ Dijkstra\+::shortest\+Path (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ Starting point \\
+\hline
+{\em destination} & -\/ End point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The shrotest path from starting point to end point 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_dijkstra_aee53b93167096d0f959fc1b548af96cd}\label{class_dijkstra_aee53b93167096d0f959fc1b548af96cd}} 
+\index{Dijkstra@{Dijkstra}!g\_@{g\_}}
+\index{g\_@{g\_}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{g\_}{g\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Dijkstra\+::g\+\_\+}
+
+Making a new graph. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Dijkstra.\+h\item 
+\mbox{\hyperlink{_dijkstra_8cpp}{Dijkstra.\+cpp}}\end{DoxyCompactItemize}

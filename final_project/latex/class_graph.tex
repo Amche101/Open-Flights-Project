@@ -1,0 +1,504 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_a62fa04782e9a454208a4c69bc2bdaca1}{Graph}} (bool weighted)
+\item 
+\mbox{\hyperlink{class_graph_a136bab2fe6248f5ac581938c22f2ad17}{Graph}} (bool weighted, bool directed)
+\item 
+vector$<$ Vertex $>$ \mbox{\hyperlink{class_graph_ad4aebacc86a16363359360496b832c4e}{get\+Adjacent}} (Vertex source) const
+\item 
+Vertex \mbox{\hyperlink{class_graph_a6a719a980479a4f280d56b0d3e86fc18}{get\+Starting\+Vertex}} () const
+\item 
+vector$<$ Vertex $>$ \mbox{\hyperlink{class_graph_a651384924c44bb1235e29d3b93352efb}{get\+Vertices}} () const
+\item 
+\mbox{\hyperlink{class_node}{Node}} \mbox{\hyperlink{class_graph_a984efc8721bc7850e3754627c25f94f3}{get\+Node}} (Vertex v) const
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} \mbox{\hyperlink{class_graph_a9b1b8a9ef2d1782becb5ce635743148c}{get\+Edge}} (Vertex source, Vertex destination) const
+\item 
+vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \mbox{\hyperlink{class_graph_a551059c402c22205c0416fa7b18dc109}{get\+Edges}} () const
+\item 
+bool \mbox{\hyperlink{class_graph_a05a5031308ed33f8c4c5d7783ea34f29}{vertex\+Exists}} (Vertex v) const
+\item 
+bool \mbox{\hyperlink{class_graph_a5b74dfabe5cf651e9afc629ae1cd91ce}{edge\+Exists}} (Vertex source, Vertex destination) const
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} \mbox{\hyperlink{class_graph_ac660a1ab375eee3ca5a8818116908070}{set\+Edge\+Label}} (Vertex source, Vertex destination, string label)
+\item 
+string \mbox{\hyperlink{class_graph_a96722d70b16b0ec75a6839a36d30bbfa}{get\+Edge\+Label}} (Vertex source, Vertex destination) const
+\item 
+\mbox{\hyperlink{class_node}{Node}} \mbox{\hyperlink{class_graph_ae3f847c9542708dd6228864733f5df93}{set\+Node\+Label}} (Vertex v, string label)
+\item 
+string \mbox{\hyperlink{class_graph_a15b3c5ad43b203156ad9f2d3d55e69be}{get\+Node\+Label}} (Vertex v) const
+\item 
+int \mbox{\hyperlink{class_graph_a997cd37c25ab7ba6d2be0491fceafa99}{get\+Edge\+Weight}} (Vertex source, Vertex destination) const
+\item 
+void \mbox{\hyperlink{class_graph_acbad3e118939a8324e4b95a093b5a3ed}{insert\+Vertex}} (Vertex v)
+\item 
+void \mbox{\hyperlink{class_graph_a6bc8f9fced47ef682f531f7b33cefd7a}{insert\+Node}} (Vertex v, \mbox{\hyperlink{class_node}{Node}} n)
+\item 
+Vertex \mbox{\hyperlink{class_graph_a08ea88e388e6468ca359521aa3542c03}{remove\+Vertex}} (Vertex v)
+\item 
+\mbox{\hyperlink{class_node}{Node}} \mbox{\hyperlink{class_graph_a111eb37b04872609d9e933823f87df1b}{remove\+Node}} (Vertex v)
+\item 
+bool \mbox{\hyperlink{class_graph_ac2ae4a7d244a22af6d514f2628c1d83f}{insert\+Edge}} (Vertex source, Vertex destination)
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} \mbox{\hyperlink{class_graph_adac871ac0cafe8753d6b3b348b448c8f}{remove\+Edge}} (Vertex source, Vertex destination)
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} \mbox{\hyperlink{class_graph_aff3ba26620b297b440cecca4b33b30aa}{set\+Edge\+Weight}} (Vertex source, Vertex destination, int weight)
+\item 
+void \mbox{\hyperlink{class_graph_ac85602fed9e3acb6cd8556d8b972ebb3}{B\+FS}} ()
+\item 
+void \mbox{\hyperlink{class_graph_a120458ab30f6755cf6bbabac34fc50d0}{B\+FS}} (Vertex v)
+\item 
+vector$<$ Vertex $>$ \mbox{\hyperlink{class_graph_aa53f733d7335a6411d64be0066ed5339}{shortest\+Path}} (Vertex source, Vertex destination)
+\item 
+void \mbox{\hyperlink{class_graph_a87e501b427ea58c1c4d01052e3399393}{init\+Snapshot}} (string title)
+\item 
+void \mbox{\hyperlink{class_graph_a7bc13591807f4dc20b935de53eddce98}{snapshot}} ()
+\item 
+void \mbox{\hyperlink{class_graph_aeeede3cb48be5d8cac08ea05ce54bd52}{print}} () const
+\item 
+void \mbox{\hyperlink{class_graph_afcac81d335edca232f40b9a047edfde6}{save\+P\+NG}} (string title) const
+\item 
+\mbox{\Hypertarget{class_graph_a08b970ecb424505f85c4f9d632b5ab01}\label{class_graph_a08b970ecb424505f85c4f9d632b5ab01}} 
+bool {\bfseries is\+Directed} () const
+\item 
+\mbox{\Hypertarget{class_graph_ac6192a41101102ca8aa6acca607c84f3}\label{class_graph_ac6192a41101102ca8aa6acca607c84f3}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a39ee20848a39f397d305f9e4e45b3cd0}\label{class_graph_a39ee20848a39f397d305f9e4e45b3cd0}} 
+static const Vertex {\bfseries Invalid\+Vertex} = \char`\"{}\+\_\+\+C\+S225\+I\+N\+V\+A\+L\+I\+D\+V\+E\+R\+T\+EX\char`\"{}
+\item 
+\mbox{\Hypertarget{class_graph_ac4a9a00cb88e7bc15043d483cfe61f79}\label{class_graph_ac4a9a00cb88e7bc15043d483cfe61f79}} 
+static const \mbox{\hyperlink{class_edge}{Edge}} {\bfseries Invalid\+Edge} = \mbox{\hyperlink{class_edge}{Edge}}(Graph\+::\+Invalid\+Vertex, Graph\+::\+Invalid\+Vertex, Graph\+::\+Invalid\+Weight, Graph\+::\+Invalid\+Label)
+\item 
+\mbox{\Hypertarget{class_graph_a9f3a19f662e688b2d274ed7307ee58ef}\label{class_graph_a9f3a19f662e688b2d274ed7307ee58ef}} 
+static const int {\bfseries Invalid\+Weight} = I\+N\+T\+\_\+\+M\+IN
+\item 
+\mbox{\Hypertarget{class_graph_a675d6d5ac0e7cf854cbc57e78e3538fd}\label{class_graph_a675d6d5ac0e7cf854cbc57e78e3538fd}} 
+static const string {\bfseries Invalid\+Label} = \char`\"{}\+\_\+\+C\+S225\+I\+N\+V\+A\+L\+I\+D\+L\+A\+B\+EL\char`\"{}
+\item 
+\mbox{\Hypertarget{class_graph_ae790ca0a2d9263b7e85fa687bf28d26b}\label{class_graph_ae790ca0a2d9263b7e85fa687bf28d26b}} 
+static const \mbox{\hyperlink{class_node}{Node}} {\bfseries Invalid\+Node} = \mbox{\hyperlink{class_node}{Node}}(\char`\"{}\+\_\+\+C\+S225\+I\+N\+V\+A\+L\+I\+D\+N\+O\+DE\char`\"{},-\/1.\+0,-\/1.\+0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a graph; used by the Graph\+Tools class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_a62fa04782e9a454208a4c69bc2bdaca1}\label{class_graph_a62fa04782e9a454208a4c69bc2bdaca1}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{bool}]{weighted }\end{DoxyParamCaption})}
+
+Constructor to create an empty graph. 
+\begin{DoxyParams}{Parameters}
+{\em weighted} & -\/ specifies whether the graph is a weighted graph or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a136bab2fe6248f5ac581938c22f2ad17}\label{class_graph_a136bab2fe6248f5ac581938c22f2ad17}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{bool}]{weighted,  }\item[{bool}]{directed }\end{DoxyParamCaption})}
+
+Constructor to create an empty graph. 
+\begin{DoxyParams}{Parameters}
+{\em weighted} & -\/ specifies whether the graph is a weighted graph or not \\
+\hline
+{\em directed} & -\/ specifies whether the graph is directed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_ac85602fed9e3acb6cd8556d8b972ebb3}\label{class_graph_ac85602fed9e3acb6cd8556d8b972ebb3}} 
+\index{Graph@{Graph}!BFS@{BFS}}
+\index{BFS@{BFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Graph\+::\+B\+FS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+run B\+FS traversal on the \mbox{\hyperlink{class_graph}{Graph}} and label the \mbox{\hyperlink{class_graph}{Graph}} for directed graph, we only care about the edges going out of a vertex Notice\+: this will reset all the labels first then run the B\+FS \mbox{\Hypertarget{class_graph_a120458ab30f6755cf6bbabac34fc50d0}\label{class_graph_a120458ab30f6755cf6bbabac34fc50d0}} 
+\index{Graph@{Graph}!BFS@{BFS}}
+\index{BFS@{BFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Graph\+::\+B\+FS (\begin{DoxyParamCaption}\item[{Vertex}]{v }\end{DoxyParamCaption})}
+
+run B\+FS traversal on the \mbox{\hyperlink{class_graph}{Graph}} from a given vertex 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ the starting vertex for traversal Notice\+: all the edges and nodes are assumed to be properly labeled \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a5b74dfabe5cf651e9afc629ae1cd91ce}\label{class_graph_a5b74dfabe5cf651e9afc629ae1cd91ce}} 
+\index{Graph@{Graph}!edgeExists@{edgeExists}}
+\index{edgeExists@{edgeExists}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{edgeExists()}{edgeExists()}}
+{\footnotesize\ttfamily bool Graph\+::edge\+Exists (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption}) const}
+
+Checks if edge exists between two vertices exists. \begin{DoxyReturn}{Returns}
+-\/ if \mbox{\hyperlink{class_edge}{Edge}} exists, true
+\begin{DoxyItemize}
+\item if \mbox{\hyperlink{class_edge}{Edge}} doesn\textquotesingle{}t exist, return false 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ad4aebacc86a16363359360496b832c4e}\label{class_graph_ad4aebacc86a16363359360496b832c4e}} 
+\index{Graph@{Graph}!getAdjacent@{getAdjacent}}
+\index{getAdjacent@{getAdjacent}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getAdjacent()}{getAdjacent()}}
+{\footnotesize\ttfamily vector$<$ Vertex $>$ Graph\+::get\+Adjacent (\begin{DoxyParamCaption}\item[{Vertex}]{source }\end{DoxyParamCaption}) const}
+
+Gets all adjacent vertices to the parameter vertex. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ vertex to get neighbors from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a9b1b8a9ef2d1782becb5ce635743148c}\label{class_graph_a9b1b8a9ef2d1782becb5ce635743148c}} 
+\index{Graph@{Graph}!getEdge@{getEdge}}
+\index{getEdge@{getEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getEdge()}{getEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} Graph\+::get\+Edge (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption}) const}
+
+Gets an edge between two vertices. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if exist, return the corresponding edge
+\begin{DoxyItemize}
+\item if edge doesn\textquotesingle{}t exist, return \mbox{\hyperlink{class_edge}{Edge()}} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a96722d70b16b0ec75a6839a36d30bbfa}\label{class_graph_a96722d70b16b0ec75a6839a36d30bbfa}} 
+\index{Graph@{Graph}!getEdgeLabel@{getEdgeLabel}}
+\index{getEdgeLabel@{getEdgeLabel}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getEdgeLabel()}{getEdgeLabel()}}
+{\footnotesize\ttfamily string Graph\+::get\+Edge\+Label (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption}) const}
+
+Gets the edge label of the edge between vertices u and v. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if edge exists, return edge label
+\begin{DoxyItemize}
+\item if edge doesn\textquotesingle{}t exist, return Invalid\+Label 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a551059c402c22205c0416fa7b18dc109}\label{class_graph_a551059c402c22205c0416fa7b18dc109}} 
+\index{Graph@{Graph}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ Graph\+::get\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets all the edges in the graph. \begin{DoxyReturn}{Returns}
+a vector of all the edges in the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a997cd37c25ab7ba6d2be0491fceafa99}\label{class_graph_a997cd37c25ab7ba6d2be0491fceafa99}} 
+\index{Graph@{Graph}!getEdgeWeight@{getEdgeWeight}}
+\index{getEdgeWeight@{getEdgeWeight}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getEdgeWeight()}{getEdgeWeight()}}
+{\footnotesize\ttfamily int Graph\+::get\+Edge\+Weight (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption}) const}
+
+Gets the weight of the edge between two vertices. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if edge exists, return edge wright
+\begin{DoxyItemize}
+\item if doesn\textquotesingle{}t, return Invalid\+Weight 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a984efc8721bc7850e3754627c25f94f3}\label{class_graph_a984efc8721bc7850e3754627c25f94f3}} 
+\index{Graph@{Graph}!getNode@{getNode}}
+\index{getNode@{getNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} Graph\+::get\+Node (\begin{DoxyParamCaption}\item[{Vertex}]{v }\end{DoxyParamCaption}) const}
+
+Gets the information node for vertex 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ the vertex we want to get node for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an information node for the vertex 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a15b3c5ad43b203156ad9f2d3d55e69be}\label{class_graph_a15b3c5ad43b203156ad9f2d3d55e69be}} 
+\index{Graph@{Graph}!getNodeLabel@{getNodeLabel}}
+\index{getNodeLabel@{getNodeLabel}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNodeLabel()}{getNodeLabel()}}
+{\footnotesize\ttfamily string Graph\+::get\+Node\+Label (\begin{DoxyParamCaption}\item[{Vertex}]{v }\end{DoxyParamCaption}) const}
+
+Gets the edge label of the edge between vertices u and v. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if edge exists, return edge label
+\begin{DoxyItemize}
+\item if edge doesn\textquotesingle{}t exist, return Invalid\+Label 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a6a719a980479a4f280d56b0d3e86fc18}\label{class_graph_a6a719a980479a4f280d56b0d3e86fc18}} 
+\index{Graph@{Graph}!getStartingVertex@{getStartingVertex}}
+\index{getStartingVertex@{getStartingVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getStartingVertex()}{getStartingVertex()}}
+{\footnotesize\ttfamily Vertex Graph\+::get\+Starting\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns one vertex in the graph. This function can be used to find a random vertex with which to start a traversal. \begin{DoxyReturn}{Returns}
+a vertex from the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a651384924c44bb1235e29d3b93352efb}\label{class_graph_a651384924c44bb1235e29d3b93352efb}} 
+\index{Graph@{Graph}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily vector$<$ Vertex $>$ Graph\+::get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets all vertices in the graph. \begin{DoxyReturn}{Returns}
+a vector of all vertices in the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a87e501b427ea58c1c4d01052e3399393}\label{class_graph_a87e501b427ea58c1c4d01052e3399393}} 
+\index{Graph@{Graph}!initSnapshot@{initSnapshot}}
+\index{initSnapshot@{initSnapshot}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{initSnapshot()}{initSnapshot()}}
+{\footnotesize\ttfamily void Graph\+::init\+Snapshot (\begin{DoxyParamCaption}\item[{string}]{title }\end{DoxyParamCaption})}
+
+Creates a name for snapshots of the graph. 
+\begin{DoxyParams}{Parameters}
+{\em title} & -\/ the name to save the snapshots as \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ac2ae4a7d244a22af6d514f2628c1d83f}\label{class_graph_ac2ae4a7d244a22af6d514f2628c1d83f}} 
+\index{Graph@{Graph}!insertEdge@{insertEdge}}
+\index{insertEdge@{insertEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{insertEdge()}{insertEdge()}}
+{\footnotesize\ttfamily bool Graph\+::insert\+Edge (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption})}
+
+Inserts an edge between two vertices. A boolean is returned for use with the random graph generation. Hence, an error is not thrown when it fails to insert an edge. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether inserting the edge was successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a6bc8f9fced47ef682f531f7b33cefd7a}\label{class_graph_a6bc8f9fced47ef682f531f7b33cefd7a}} 
+\index{Graph@{Graph}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}}
+{\footnotesize\ttfamily void Graph\+::insert\+Node (\begin{DoxyParamCaption}\item[{Vertex}]{v,  }\item[{\mbox{\hyperlink{class_node}{Node}}}]{n }\end{DoxyParamCaption})}
+
+Inserts a new node into the graph and initializes its label as \char`\"{}\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ the name for the vertex \\
+\hline
+{\em n} & -\/ the information node associated with the vertex \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_acbad3e118939a8324e4b95a093b5a3ed}\label{class_graph_acbad3e118939a8324e4b95a093b5a3ed}} 
+\index{Graph@{Graph}!insertVertex@{insertVertex}}
+\index{insertVertex@{insertVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{insertVertex()}{insertVertex()}}
+{\footnotesize\ttfamily void Graph\+::insert\+Vertex (\begin{DoxyParamCaption}\item[{Vertex}]{v }\end{DoxyParamCaption})}
+
+Inserts a new vertex into the graph and initializes its label as \char`\"{}\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ the name for the vertex, creating an empty node for vertex\+\_\+list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_aeeede3cb48be5d8cac08ea05ce54bd52}\label{class_graph_aeeede3cb48be5d8cac08ea05ce54bd52}} 
+\index{Graph@{Graph}!print@{print}}
+\index{print@{print}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Graph\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Prints the graph to stdout. \mbox{\Hypertarget{class_graph_adac871ac0cafe8753d6b3b348b448c8f}\label{class_graph_adac871ac0cafe8753d6b3b348b448c8f}} 
+\index{Graph@{Graph}!removeEdge@{removeEdge}}
+\index{removeEdge@{removeEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{removeEdge()}{removeEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} Graph\+::remove\+Edge (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption})}
+
+Removes the edge between two vertices. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if edge exists, remove it and return removed edge
+\begin{DoxyItemize}
+\item if not, return Invalid\+Edge 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a111eb37b04872609d9e933823f87df1b}\label{class_graph_a111eb37b04872609d9e933823f87df1b}} 
+\index{Graph@{Graph}!removeNode@{removeNode}}
+\index{removeNode@{removeNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{removeNode()}{removeNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} Graph\+::remove\+Node (\begin{DoxyParamCaption}\item[{Vertex}]{v }\end{DoxyParamCaption})}
+
+Removes a given node from the vertex\+\_\+list. 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ the vertex to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if v exists, return v
+\begin{DoxyItemize}
+\item if not, return Invalid\+Node; 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a08ea88e388e6468ca359521aa3542c03}\label{class_graph_a08ea88e388e6468ca359521aa3542c03}} 
+\index{Graph@{Graph}!removeVertex@{removeVertex}}
+\index{removeVertex@{removeVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{removeVertex()}{removeVertex()}}
+{\footnotesize\ttfamily Vertex Graph\+::remove\+Vertex (\begin{DoxyParamCaption}\item[{Vertex}]{v }\end{DoxyParamCaption})}
+
+Removes a given vertex from the graph. 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ the vertex to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if v exists, return v
+\begin{DoxyItemize}
+\item if not, return Invalid\+Vertex; 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_afcac81d335edca232f40b9a047edfde6}\label{class_graph_afcac81d335edca232f40b9a047edfde6}} 
+\index{Graph@{Graph}!savePNG@{savePNG}}
+\index{savePNG@{savePNG}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{savePNG()}{savePNG()}}
+{\footnotesize\ttfamily void Graph\+::save\+P\+NG (\begin{DoxyParamCaption}\item[{string}]{title }\end{DoxyParamCaption}) const}
+
+Saves the graph as a P\+NG image. 
+\begin{DoxyParams}{Parameters}
+{\em title} & -\/ the filename of the P\+NG image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ac660a1ab375eee3ca5a8818116908070}\label{class_graph_ac660a1ab375eee3ca5a8818116908070}} 
+\index{Graph@{Graph}!setEdgeLabel@{setEdgeLabel}}
+\index{setEdgeLabel@{setEdgeLabel}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{setEdgeLabel()}{setEdgeLabel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} Graph\+::set\+Edge\+Label (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination,  }\item[{string}]{label }\end{DoxyParamCaption})}
+
+Sets the edge label of the edge between vertices u and v. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if edge exists, set the label to the corresponding edge(if not directed, set the reverse one too), return edge with new label
+\begin{DoxyItemize}
+\item if edge doesn\textquotesingle{}t exist, return Invalid\+Edge 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_aff3ba26620b297b440cecca4b33b30aa}\label{class_graph_aff3ba26620b297b440cecca4b33b30aa}} 
+\index{Graph@{Graph}!setEdgeWeight@{setEdgeWeight}}
+\index{setEdgeWeight@{setEdgeWeight}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{setEdgeWeight()}{setEdgeWeight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} Graph\+::set\+Edge\+Weight (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination,  }\item[{int}]{weight }\end{DoxyParamCaption})}
+
+Sets the weight of the edge between two vertices. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+{\em weight} & -\/ the weight to set to the edge \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if edge exists, set edge weight and return edge with new weight
+\begin{DoxyItemize}
+\item if not, return Invalid\+Edge 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_ae3f847c9542708dd6228864733f5df93}\label{class_graph_ae3f847c9542708dd6228864733f5df93}} 
+\index{Graph@{Graph}!setNodeLabel@{setNodeLabel}}
+\index{setNodeLabel@{setNodeLabel}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{setNodeLabel()}{setNodeLabel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} Graph\+::set\+Node\+Label (\begin{DoxyParamCaption}\item[{Vertex}]{v,  }\item[{string}]{label }\end{DoxyParamCaption})}
+
+Sets the edge label of the edge between vertices u and v. 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ one vertex the edge is connected to \\
+\hline
+{\em destination} & -\/ the other vertex the edge is connected to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ if edge exists, set the label to the corresponding edge(if not directed, set the reverse one too), return edge with new label
+\begin{DoxyItemize}
+\item if edge doesn\textquotesingle{}t exist, return Invalid\+Edge 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_aa53f733d7335a6411d64be0066ed5339}\label{class_graph_aa53f733d7335a6411d64be0066ed5339}} 
+\index{Graph@{Graph}!shortestPath@{shortestPath}}
+\index{shortestPath@{shortestPath}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{shortestPath()}{shortestPath()}}
+{\footnotesize\ttfamily vector$<$Vertex$>$ Graph\+::shortest\+Path (\begin{DoxyParamCaption}\item[{Vertex}]{source,  }\item[{Vertex}]{destination }\end{DoxyParamCaption})}
+
+Uses \mbox{\hyperlink{class_dijkstra}{Dijkstra}}\textquotesingle{}s algorithm to find the shortest path Implementation based on \href{https://courses.grainger.illinois.edu/cs225/fa2020/resources/dijkstra/}{\texttt{ https\+://courses.\+grainger.\+illinois.\+edu/cs225/fa2020/resources/dijkstra/}} 
+\begin{DoxyParams}{Parameters}
+{\em source} & -\/ the startpoint \\
+\hline
+{\em destination} & -\/ the endpoint \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the path found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a7bc13591807f4dc20b935de53eddce98}\label{class_graph_a7bc13591807f4dc20b935de53eddce98}} 
+\index{Graph@{Graph}!snapshot@{snapshot}}
+\index{snapshot@{snapshot}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{snapshot()}{snapshot()}}
+{\footnotesize\ttfamily void Graph\+::snapshot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saves a snapshot of the graph to file. \mbox{\hyperlink{class_graph_a87e501b427ea58c1c4d01052e3399393}{init\+Snapshot()}} must be run first. \mbox{\Hypertarget{class_graph_a05a5031308ed33f8c4c5d7783ea34f29}\label{class_graph_a05a5031308ed33f8c4c5d7783ea34f29}} 
+\index{Graph@{Graph}!vertexExists@{vertexExists}}
+\index{vertexExists@{vertexExists}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{vertexExists()}{vertexExists()}}
+{\footnotesize\ttfamily bool Graph\+::vertex\+Exists (\begin{DoxyParamCaption}\item[{Vertex}]{v }\end{DoxyParamCaption}) const}
+
+Checks if the given vertex exists. \begin{DoxyReturn}{Returns}
+-\/ if Vertex exists, true
+\begin{DoxyItemize}
+\item if Vertex doesn\textquotesingle{}t exist, return false 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{graph_8h}{graph.\+h}}\item 
+graph.\+cpp\end{DoxyCompactItemize}

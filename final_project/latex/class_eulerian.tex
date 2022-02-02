@@ -1,0 +1,149 @@
+\hypertarget{class_eulerian}{}\doxysection{Eulerian Class Reference}
+\label{class_eulerian}\index{Eulerian@{Eulerian}}
+
+
+{\ttfamily \#include $<$Eulerian.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eulerian_a80b1782376ec7978d55e4fe22adab301}{Eulerian}} (\mbox{\hyperlink{class_graph}{Graph}} graph, vector$<$ Vertex $>$vertices)
+\item 
+int \mbox{\hyperlink{class_eulerian_a50e4fea2534343486923fa697797d0a5}{is\+Eulerian}} ()
+\item 
+bool \mbox{\hyperlink{class_eulerian_a500ebe1644393ba2e15d34b58efef591}{is\+Connected}} ()
+\item 
+void \mbox{\hyperlink{class_eulerian_a7f01b1b77ff0a47d1f88a577e9a9e8ed}{D\+FS}} (Vertex v, unordered\+\_\+map$<$ Vertex, bool $>$ visited)
+\item 
+void \mbox{\hyperlink{class_eulerian_aa94916024c760496846fbf13817a0945}{find\+Euler\+Tour}} ()
+\item 
+void \mbox{\hyperlink{class_eulerian_a07f1a49a3dae2c1199009a7202bae533}{find\+Euler\+Util}} (Vertex u)
+\item 
+int \mbox{\hyperlink{class_eulerian_abde36e6c7adc4e8cd8f168822dcde6e9}{D\+F\+S\+Count}} (Vertex v, unordered\+\_\+map$<$ Vertex, bool $>$ \&visited)
+\item 
+bool \mbox{\hyperlink{class_eulerian_a1fe71976cc6623377a5422e4dcd8f8fa}{is\+Valid\+Next\+Edge}} (Vertex u, Vertex v)
+\item 
+void \mbox{\hyperlink{class_eulerian_a080eec002497880cdb5f5b12b3a09e98}{print}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_eulerian_a67335da04fdeb9bb0fb9867363e172c6}\label{class_eulerian_a67335da04fdeb9bb0fb9867363e172c6}} 
+\mbox{\hyperlink{class_graph}{Graph}} {\bfseries g\+\_\+}
+\item 
+\mbox{\Hypertarget{class_eulerian_a587b8f6dc09c40951bed44f277fdabb3}\label{class_eulerian_a587b8f6dc09c40951bed44f277fdabb3}} 
+vector$<$ Vertex $>$ {\bfseries path\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a algorithm to determine the \mbox{\hyperlink{class_eulerian}{Eulerian}} path of a graph. Some minor assumptions/modifications\+: we are making an directed/undirected graph into a undirected graph to analyze because we are assuming no one is traveling back and forth between two same airports and there will normally be a flight going back and forth between two places 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eulerian_a80b1782376ec7978d55e4fe22adab301}\label{class_eulerian_a80b1782376ec7978d55e4fe22adab301}} 
+\index{Eulerian@{Eulerian}!Eulerian@{Eulerian}}
+\index{Eulerian@{Eulerian}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{Eulerian()}{Eulerian()}}
+{\footnotesize\ttfamily Eulerian\+::\+Eulerian (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}}}]{graph,  }\item[{vector$<$ Vertex $>$}]{vertices }\end{DoxyParamCaption})}
+
+Constructor to create a eulerian analyzer. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & -\/ the input graph we want to create a subgraph from \\
+\hline
+{\em vertices} & -\/ the vertices we want to include to determine a \mbox{\hyperlink{class_eulerian}{Eulerian}} path \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eulerian_a7f01b1b77ff0a47d1f88a577e9a9e8ed}\label{class_eulerian_a7f01b1b77ff0a47d1f88a577e9a9e8ed}} 
+\index{Eulerian@{Eulerian}!DFS@{DFS}}
+\index{DFS@{DFS}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{DFS()}{DFS()}}
+{\footnotesize\ttfamily void Eulerian\+::\+D\+FS (\begin{DoxyParamCaption}\item[{Vertex}]{v,  }\item[{unordered\+\_\+map$<$ Vertex, bool $>$}]{visited }\end{DoxyParamCaption})}
+
+Recursive Implementation to Run D\+FS for is\+Connected method 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ input vertex v to run D\+FS from \\
+\hline
+{\em visited} & -\/ input map that label vertex as visited or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_eulerian_abde36e6c7adc4e8cd8f168822dcde6e9}\label{class_eulerian_abde36e6c7adc4e8cd8f168822dcde6e9}} 
+\index{Eulerian@{Eulerian}!DFSCount@{DFSCount}}
+\index{DFSCount@{DFSCount}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{DFSCount()}{DFSCount()}}
+{\footnotesize\ttfamily int Eulerian\+::\+D\+F\+S\+Count (\begin{DoxyParamCaption}\item[{Vertex}]{v,  }\item[{unordered\+\_\+map$<$ Vertex, bool $>$ \&}]{visited }\end{DoxyParamCaption})}
+
+Count the Reachable Vertices from a given vertex 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ input vertex v to run D\+F\+S\+Count from \\
+\hline
+{\em visited} & -\/ input map that label vertex as visited or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ an integer for the number of reachable vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eulerian_aa94916024c760496846fbf13817a0945}\label{class_eulerian_aa94916024c760496846fbf13817a0945}} 
+\index{Eulerian@{Eulerian}!findEulerTour@{findEulerTour}}
+\index{findEulerTour@{findEulerTour}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{findEulerTour()}{findEulerTour()}}
+{\footnotesize\ttfamily void Eulerian\+::find\+Euler\+Tour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method to find the \mbox{\hyperlink{class_eulerian}{Eulerian}} path for the whole graph and store it in the public variable path\+\_\+ \mbox{\Hypertarget{class_eulerian_a07f1a49a3dae2c1199009a7202bae533}\label{class_eulerian_a07f1a49a3dae2c1199009a7202bae533}} 
+\index{Eulerian@{Eulerian}!findEulerUtil@{findEulerUtil}}
+\index{findEulerUtil@{findEulerUtil}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{findEulerUtil()}{findEulerUtil()}}
+{\footnotesize\ttfamily void Eulerian\+::find\+Euler\+Util (\begin{DoxyParamCaption}\item[{Vertex}]{u }\end{DoxyParamCaption})}
+
+Recursive Method to find the \mbox{\hyperlink{class_eulerian}{Eulerian}} path for the graph unitil vertex u and store it in the public variable path\+\_\+ \mbox{\Hypertarget{class_eulerian_a500ebe1644393ba2e15d34b58efef591}\label{class_eulerian_a500ebe1644393ba2e15d34b58efef591}} 
+\index{Eulerian@{Eulerian}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily bool Eulerian\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method to check if all non-\/zero degree vertices are connected. \begin{DoxyReturn}{Returns}
+-\/ All non-\/zero degree vertices are connected or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eulerian_a50e4fea2534343486923fa697797d0a5}\label{class_eulerian_a50e4fea2534343486923fa697797d0a5}} 
+\index{Eulerian@{Eulerian}!isEulerian@{isEulerian}}
+\index{isEulerian@{isEulerian}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{isEulerian()}{isEulerian()}}
+{\footnotesize\ttfamily int Eulerian\+::is\+Eulerian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to determine if the graph is \mbox{\hyperlink{class_eulerian}{Eulerian}} or not \begin{DoxyReturn}{Returns}
+-\/ If graph is not \mbox{\hyperlink{class_eulerian}{Eulerian}}, return 0;
+\begin{DoxyItemize}
+\item If graph has an Euler path (Semi-\/\+Eulerian), return 1;
+\item If graph has an Euler Circuit (\mbox{\hyperlink{class_eulerian}{Eulerian}}), return 2; 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eulerian_a1fe71976cc6623377a5422e4dcd8f8fa}\label{class_eulerian_a1fe71976cc6623377a5422e4dcd8f8fa}} 
+\index{Eulerian@{Eulerian}!isValidNextEdge@{isValidNextEdge}}
+\index{isValidNextEdge@{isValidNextEdge}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{isValidNextEdge()}{isValidNextEdge()}}
+{\footnotesize\ttfamily bool Eulerian\+::is\+Valid\+Next\+Edge (\begin{DoxyParamCaption}\item[{Vertex}]{u,  }\item[{Vertex}]{v }\end{DoxyParamCaption})}
+
+Check to see if the next edge is a valid edge to pick or not 
+\begin{DoxyParams}{Parameters}
+{\em u} & -\/ input source vertex for the edge \\
+\hline
+{\em v} & -\/ input dest vertex for the edge \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true for valid pick 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eulerian_a080eec002497880cdb5f5b12b3a09e98}\label{class_eulerian_a080eec002497880cdb5f5b12b3a09e98}} 
+\index{Eulerian@{Eulerian}!print@{print}}
+\index{print@{print}!Eulerian@{Eulerian}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Eulerian\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+print out the path in terms of vertices 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Eulerian.\+h\item 
+\mbox{\hyperlink{_eulerian_8cpp}{Eulerian.\+cpp}}\end{DoxyCompactItemize}

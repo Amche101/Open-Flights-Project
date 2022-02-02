@@ -1,0 +1,112 @@
+\hypertarget{class_node}{}\doxysection{Node Class Reference}
+\label{class_node}\index{Node@{Node}}
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a29301d7a338fd1e079ac8cdb1f8c02e1}{Node}} (string name)
+\item 
+\mbox{\hyperlink{class_node_af4abc294f8eadd6fbf4714150838c709}{Node}} (double latitude, double longitude)
+\item 
+\mbox{\hyperlink{class_node_adf542e7a6999be6a40ad02ee85dd0a37}{Node}} (string name, double latitude, double longitude)
+\item 
+\mbox{\hyperlink{class_node_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
+\item 
+bool \mbox{\hyperlink{class_node_a54c57aca60b8ca73fb5ab7a320f44666}{operator==}} (\mbox{\hyperlink{class_node}{Node}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_ab0afb8c4a931910e5fd14bd431e0c5ff}\label{class_node_ab0afb8c4a931910e5fd14bd431e0c5ff}} 
+string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{class_node_a8c943b3479c0c2c8a710508d9f51563b}\label{class_node_a8c943b3479c0c2c8a710508d9f51563b}} 
+double {\bfseries latitude\+\_\+}
+\item 
+\mbox{\Hypertarget{class_node_ac846e94434ea7398d5518006bfcd910b}\label{class_node_ac846e94434ea7398d5518006bfcd910b}} 
+double {\bfseries longitude\+\_\+}
+\item 
+\mbox{\Hypertarget{class_node_a4aa7485c7eb55f22bf9738af9dff0e1b}\label{class_node_a4aa7485c7eb55f22bf9738af9dff0e1b}} 
+string {\bfseries label\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an vertex in a graph; used by the \mbox{\hyperlink{class_graph}{Graph}} class.
+
+\begin{DoxyAuthor}{Author}
+Haijian Wang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Fall 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_a29301d7a338fd1e079ac8cdb1f8c02e1}\label{class_node_a29301d7a338fd1e079ac8cdb1f8c02e1}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Parameter constructor for unweighted graphs. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & -\/ The Open\+Flights identifier for this airport(vertex) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_af4abc294f8eadd6fbf4714150838c709}\label{class_node_af4abc294f8eadd6fbf4714150838c709}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Parameter constructor for unweighted graphs. 
+\begin{DoxyParams}{Parameters}
+{\em latitude} & -\/ latitude of the airport \\
+\hline
+{\em longitude} & -\/ longitude of the airport \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_adf542e7a6999be6a40ad02ee85dd0a37}\label{class_node_adf542e7a6999be6a40ad02ee85dd0a37}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Parameter constructor for weighted graphs. 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ the name of this airport \\
+\hline
+{\em latitude} & -\/ latitude of the airport \\
+\hline
+{\em longitude} & -\/ longitude of the airport \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_ad7a34779cad45d997bfd6d3d8043c75f}\label{class_node_ad7a34779cad45d997bfd6d3d8043c75f}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_a54c57aca60b8ca73fb5ab7a320f44666}\label{class_node_a54c57aca60b8ca73fb5ab7a320f44666}} 
+\index{Node@{Node}!operator==@{operator==}}
+\index{operator==@{operator==}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Node\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Compares two vertices. 
+\begin{DoxyParams}{Parameters}
+{\em other} & -\/ the vertex to compare with \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+node.\+h\end{DoxyCompactItemize}
