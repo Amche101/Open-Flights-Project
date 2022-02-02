@@ -14,7 +14,7 @@ This project reads data from the airports.txt and routes.txt, and then parses th
 
 ## Credit
 * Haijian Wang
-* Alex Chen
+* Alex Che
 * Aasheesh Randeo
 * Sabien Bell
 	
